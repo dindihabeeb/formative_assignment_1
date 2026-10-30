@@ -1,0 +1,14 @@
+$ readelf -p .rodata data_sync
+
+
+String dump of section '.rodata':
+  [     8]  Usage: %s <source_dir> <backup_dir>\n
+  [    30]  1.0
+  [    38]  data_sync %s - comparing %s with %s\n
+  [    60]    NEEDS SYNC  %s\n
+  [    78]  %d of %d entries need to be synced.\n
+  [    a0]  .
+  [    a8]  ..
+  [    b0]  Warning: more than %d entries in %s, the rest are ignored\n
+  [    f0]  %s
+

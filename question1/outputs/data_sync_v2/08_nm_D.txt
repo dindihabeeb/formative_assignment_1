@@ -1,0 +1,29 @@
+$ nm -D data_sync_v2
+
+                 w _ITM_deregisterTMCloneTable
+                 w _ITM_registerTMCloneTable
+                 w __cxa_finalize@GLIBC_2.17
+                 U __errno_location@GLIBC_2.17
+                 U __fprintf_chk@GLIBC_2.17
+                 w __gmon_start__
+                 U __libc_start_main@GLIBC_2.34
+                 U __printf_chk@GLIBC_2.17
+                 U __snprintf_chk@GLIBC_2.17
+                 U __stack_chk_fail@GLIBC_2.17
+                 U __stack_chk_guard@GLIBC_2.17
+                 U abort@GLIBC_2.17
+                 U closedir@GLIBC_2.17
+                 U fclose@GLIBC_2.17
+                 U ferror@GLIBC_2.17
+                 U fopen@GLIBC_2.17
+                 U fread@GLIBC_2.17
+                 U fwrite@GLIBC_2.17
+                 U localtime@GLIBC_2.17
+                 U opendir@GLIBC_2.17
+                 U perror@GLIBC_2.17
+                 U readdir@GLIBC_2.17
+                 U stat@GLIBC_2.33
+                 U stderr@GLIBC_2.17
+                 U strcmp@GLIBC_2.17
+                 U strftime@GLIBC_2.17
+                 U time@GLIBC_2.17

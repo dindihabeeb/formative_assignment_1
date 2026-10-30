@@ -1,0 +1,7 @@
+$ readelf --debug-dump=info data_sync | grep -m 3 -A 1 DW_AT_producer
+
+    <d>   DW_AT_producer    : (indirect string, offset: 0x210): GNU C89 13.3.0 -mlittle-endian -mabi=lp64 -g -O0 -std=gnu90 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection
+    <11>   DW_AT_language    : 1	(ANSI C)
+--
+    <405>   DW_AT_producer    : (indirect string, offset: 0x210): GNU C89 13.3.0 -mlittle-endian -mabi=lp64 -g -O0 -std=gnu90 -fasynchronous-unwind-tables -fstack-protector-strong -fstack-clash-protection
+    <409>   DW_AT_language    : 1	(ANSI C)

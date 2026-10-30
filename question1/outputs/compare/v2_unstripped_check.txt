@@ -1,0 +1,24 @@
+$ cmp v2_restripped data_sync_v2
+
+identical: data_sync_v2 is exactly the unstripped build after strip
+
+$ nm -n v2_unstripped | grep -i ' t '
+
+0000000000000ab0 T _init
+0000000000000c80 T main
+0000000000000f00 T _start
+0000000000000f34 t call_weak_fn
+0000000000000f50 t deregister_tm_clones
+0000000000000f80 t register_tm_clones
+0000000000000fc0 t __do_global_dtors_aux
+0000000000001010 t frame_dummy
+0000000000001020 T check_file
+0000000000001180 T state_str
+00000000000011d0 T file_checksum
+0000000000001360 T open_log
+00000000000013b0 T log_event
+00000000000014a0 T close_log
+00000000000014d0 T join_path
+0000000000001524 T scan_dir
+0000000000001704 T has_name
+0000000000001784 T _fini

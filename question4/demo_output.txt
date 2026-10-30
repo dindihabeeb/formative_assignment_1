@@ -1,0 +1,98 @@
+===== Build =====
+
+22:03:02 $ gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -o server_controller server_controller.c
+
+===== Run 1: SIGUSR1 (status), SIGUSR2 (toggle), SIGINT (graceful) =====
+
+22:03:02 $ ./server_controller &
+22:03:02 [Server Controller] Started with PID 1569 in NORMAL mode (check every 5 s)
+22:03:02 [Server Controller] kill -USR1 1569 = status, -USR2 = toggle mode, -INT = graceful shutdown, -TERM = emergency stop
+22:03:02 [Server Controller] Service running normally... (check #1)
+
+22:03:02 $ cat server_controller.pid
+1569
+
+22:03:02 $ ps -o pid,stat,cmd -p 1569
+    PID STAT CMD
+   1569 S    ./server_controller
+
+22:03:02 $ ./server_controller
+[Server Controller] already running with PID 1569
+22:03:02 [shell] second instance refused, as expected
+22:03:07 [Server Controller] Service running normally... (check #2)
+
+22:03:07 $ kill -SIGUSR1 1569
+22:03:07 [Server Controller] ===== STATUS REPORT (SIGUSR1) =====
+22:03:07 [Server Controller]   Process ID   : 1569
+22:03:07 [Server Controller]   State        : NORMAL
+22:03:07 [Server Controller]   Uptime       : 5 s
+22:03:07 [Server Controller]   Checks done  : 2
+22:03:07 [Server Controller]   Mode changes : 0
+
+22:03:08 $ kill -SIGUSR2 1569
+22:03:08 [Server Controller] SIGUSR2 received: mode changed NORMAL -> MAINTENANCE
+
+22:03:09 $ kill -SIGUSR1 1569
+22:03:09 [Server Controller] ===== STATUS REPORT (SIGUSR1) =====
+22:03:09 [Server Controller]   Process ID   : 1569
+22:03:09 [Server Controller]   State        : MAINTENANCE
+22:03:09 [Server Controller]   Uptime       : 7 s
+22:03:09 [Server Controller]   Checks done  : 2
+22:03:09 [Server Controller]   Mode changes : 1
+22:03:12 [Server Controller] MAINTENANCE mode: monitoring paused... (check #3)
+
+22:03:13 $ kill -SIGUSR2 1569
+22:03:13 [Server Controller] SIGUSR2 received: mode changed MAINTENANCE -> NORMAL
+
+22:03:14 $ kill -SIGUSR1 1569
+22:03:14 [Server Controller] ===== STATUS REPORT (SIGUSR1) =====
+22:03:14 [Server Controller]   Process ID   : 1569
+22:03:14 [Server Controller]   State        : NORMAL
+22:03:14 [Server Controller]   Uptime       : 12 s
+22:03:14 [Server Controller]   Checks done  : 3
+22:03:14 [Server Controller]   Mode changes : 2
+
+22:03:16 $ kill -SIGINT 1569
+22:03:16 [Server Controller] SIGINT received: starting graceful shutdown...
+22:03:16 [Server Controller]   Final state: NORMAL, checks done: 3, mode changes: 2
+22:03:16 [Server Controller]   Removed PID file server_controller.pid
+22:03:16 [Server Controller]   Closing log file server_controller.log
+22:03:16 [Server Controller] Shutdown complete. Goodbye.
+22:03:16 [shell] server_controller exit status: 0
+
+22:03:16 $ ls -l server_controller.pid
+ls: cannot access 'server_controller.pid': No such file or directory
+
+22:03:16 $ ps -o pid,stat,cmd -p 1569
+    PID STAT CMD
+
+===== Run 2: SIGTERM (emergency termination) =====
+
+22:03:16 $ ./server_controller &
+22:03:16 [Server Controller] Started with PID 1596 in NORMAL mode (check every 5 s)
+22:03:16 [Server Controller] kill -USR1 1596 = status, -USR2 = toggle mode, -INT = graceful shutdown, -TERM = emergency stop
+22:03:16 [Server Controller] Service running normally... (check #1)
+22:03:21 [Server Controller] Service running normally... (check #2)
+
+22:03:23 $ kill -SIGTERM 1596
+22:03:23 [Server Controller] SIGTERM received: EMERGENCY TERMINATION, exiting now!
+22:03:23 [shell] server_controller exit status: 143
+
+22:03:23 $ cat server_controller.pid
+1596
+
+===== Run 3: restart after SIGTERM finds the stale PID file =====
+
+22:03:23 $ ./server_controller &
+22:03:23 [Server Controller] Found stale PID file server_controller.pid, replacing it
+22:03:23 [Server Controller] Started with PID 1604 in NORMAL mode (check every 5 s)
+22:03:23 [Server Controller] kill -USR1 1604 = status, -USR2 = toggle mode, -INT = graceful shutdown, -TERM = emergency stop
+22:03:23 [Server Controller] Service running normally... (check #1)
+
+22:03:24 $ kill -SIGINT 1604
+22:03:24 [Server Controller] SIGINT received: starting graceful shutdown...
+22:03:24 [Server Controller]   Final state: NORMAL, checks done: 1, mode changes: 0
+22:03:24 [Server Controller]   Removed PID file server_controller.pid
+22:03:24 [Server Controller]   Closing log file server_controller.log
+22:03:24 [Server Controller] Shutdown complete. Goodbye.
+22:03:24 [shell] server_controller exit status: 0

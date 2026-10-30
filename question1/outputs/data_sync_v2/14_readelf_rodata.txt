@@ -1,0 +1,30 @@
+$ readelf -p .rodata data_sync_v2
+
+
+String dump of section '.rodata':
+  [     8]  NEW
+  [    10]  UP TO DATE
+  [    20]  CHANGED (size)
+  [    30]  CHANGED (checksum)
+  [    48]  ERROR
+  [    50]  rb
+  [    58]  a
+  [    60]  unknown time
+  [    70]  %Y-%m-%d %H:%M:%S
+  [    88]  [%s] %s %s\n
+  [    98]  Usage: %s <source_dir> <backup_dir>\n
+  [    c0]  2.0
+  [    c8]  data_sync %s - comparing %s with %s\n
+  [    f0]  data_sync.log
+  [   100]  Warning: running without a log file\n
+  [   128]  START
+  [   130]  could not read a directory
+  [   150]  FAILED
+  [   158]    %-18s  %s\n
+  [   168]  %d of %d file(s) need to be synced, %d error(s).\n
+  [   1a0]  %d to sync, %d error(s)
+  [   1b8]  DONE
+  [   1c0]  %s/%s
+  [   1c8]  Warning: more than %d files in %s, the rest are ignored\n
+  [   208]  %s
+

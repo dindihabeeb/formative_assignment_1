@@ -1,0 +1,22 @@
+$ readelf -V data_sync_v2
+
+
+Version symbols section '.gnu.version' contains 30 entries:
+ Addr: 0x00000000000006fc  Offset: 0x000006fc  Link: 5 (.dynsym)
+  000:   0 (*local*)       0 (*local*)       0 (*local*)       2 (GLIBC_2.34) 
+  004:   3 (GLIBC_2.17)    1 (*global*)      3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+  008:   3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+  00c:   3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+  010:   3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17)    1 (*global*)   
+  014:   4 (GLIBC_2.33)    5 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+  018:   3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17)    1 (*global*)   
+  01c:   3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+
+Version needs section '.gnu.version_r' contains 2 entries:
+ Addr: 0x0000000000000738  Offset: 0x00000738  Link: 6 (.dynstr)
+  000000: Version: 1  File: ld-linux-aarch64.so.1  Cnt: 1
+  0x0010:   Name: GLIBC_2.17  Flags: none  Version: 5
+  0x0020: Version: 1  File: libc.so.6  Cnt: 3
+  0x0030:   Name: GLIBC_2.33  Flags: none  Version: 4
+  0x0040:   Name: GLIBC_2.17  Flags: none  Version: 3
+  0x0050:   Name: GLIBC_2.34  Flags: none  Version: 2

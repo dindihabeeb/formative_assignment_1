@@ -1,0 +1,37 @@
+$ comm -3 imports_data_sync.txt imports_data_sync_v2.txt
+(left column: only in data_sync, right column: only in data_sync_v2)
+
+	__errno_location@GLIBC_2.17
+	__fprintf_chk@GLIBC_2.17
+	__printf_chk@GLIBC_2.17
+	__snprintf_chk@GLIBC_2.17
+	__stack_chk_fail@GLIBC_2.17
+	__stack_chk_guard@GLIBC_2.17
+	fclose@GLIBC_2.17
+	ferror@GLIBC_2.17
+	fopen@GLIBC_2.17
+fprintf@GLIBC_2.17
+	fread@GLIBC_2.17
+	fwrite@GLIBC_2.17
+	localtime@GLIBC_2.17
+printf@GLIBC_2.17
+snprintf@GLIBC_2.17
+	stat@GLIBC_2.33
+	strftime@GLIBC_2.17
+	time@GLIBC_2.17
+
+$ comm -12 imports_data_sync.txt imports_data_sync_v2.txt
+(imported by both)
+
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize@GLIBC_2.17
+__gmon_start__
+__libc_start_main@GLIBC_2.34
+abort@GLIBC_2.17
+closedir@GLIBC_2.17
+opendir@GLIBC_2.17
+perror@GLIBC_2.17
+readdir@GLIBC_2.17
+stderr@GLIBC_2.17
+strcmp@GLIBC_2.17

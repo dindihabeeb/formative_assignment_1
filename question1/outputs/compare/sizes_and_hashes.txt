@@ -1,0 +1,9 @@
+$ ls -l data_sync data_sync_v2
+
+-rwxr-xr-x 1 root root 76272 Oct 30 20:48 data_sync
+-rwxr-xr-x 1 root root 67496 Oct 30 20:48 data_sync_v2
+
+$ sha256sum data_sync data_sync_v2
+
+d9d9ba4ebdc156908a9da2ba024919c314b54295cee155844979e8382876676c  data_sync
+ba342e10b57395cfd46c56f773e8104b2d16745b615276c9482a0a16609b477e  data_sync_v2

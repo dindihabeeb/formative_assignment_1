@@ -1,0 +1,6 @@
+bin/
+*.out
+question2/backup_tool
+question3/build/
+__pycache__/
+question4/server_controller

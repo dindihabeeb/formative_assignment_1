@@ -1,0 +1,14 @@
+test_input_not_changed (__main__.TestEquivalence.test_input_not_changed) ... ok
+test_normalize_range (__main__.TestEquivalence.test_normalize_range) ... ok
+test_result_types (__main__.TestEquivalence.test_result_types) ... ok
+test_valid_datasets_identical (__main__.TestEquivalence.test_valid_datasets_identical) ... ok
+test_invalid_inputs (__main__.TestErrors.test_invalid_inputs) ... ok
+test_array_buffer_released (__main__.TestMemory.test_array_buffer_released) ... ok
+test_no_memory_growth (__main__.TestMemory.test_no_memory_growth) ... ok
+test_no_reference_leaks (__main__.TestMemory.test_no_reference_leaks) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 1.550s
+
+OK
+wrote results/equivalence.md: 142/142 valid calls identical

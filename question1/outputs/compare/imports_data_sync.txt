@@ -1,0 +1,15 @@
+_ITM_deregisterTMCloneTable
+_ITM_registerTMCloneTable
+__cxa_finalize@GLIBC_2.17
+__gmon_start__
+__libc_start_main@GLIBC_2.34
+abort@GLIBC_2.17
+closedir@GLIBC_2.17
+fprintf@GLIBC_2.17
+opendir@GLIBC_2.17
+perror@GLIBC_2.17
+printf@GLIBC_2.17
+readdir@GLIBC_2.17
+snprintf@GLIBC_2.17
+stderr@GLIBC_2.17
+strcmp@GLIBC_2.17

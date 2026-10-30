@@ -1,0 +1,9 @@
+$ objdump -t data_sync_v2
+
+
+data_sync_v2:     file format elf64-littleaarch64
+
+SYMBOL TABLE:
+no symbols
+
+

@@ -1,0 +1,3 @@
+$ nm -n data_sync_v2
+
+nm: data_sync_v2: no symbols

@@ -1,0 +1,16 @@
+$ readelf -V data_sync
+
+
+Version symbols section '.gnu.version' contains 18 entries:
+ Addr: 0x0000000000000534  Offset: 0x00000534  Link: 5 (.dynsym)
+  000:   0 (*local*)       0 (*local*)       0 (*local*)       2 (GLIBC_2.34) 
+  004:   3 (GLIBC_2.17)    1 (*global*)      3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+  008:   3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+  00c:   1 (*global*)      3 (GLIBC_2.17)    3 (GLIBC_2.17)    1 (*global*)   
+  010:   3 (GLIBC_2.17)    3 (GLIBC_2.17) 
+
+Version needs section '.gnu.version_r' contains 1 entry:
+ Addr: 0x0000000000000558  Offset: 0x00000558  Link: 6 (.dynstr)
+  000000: Version: 1  File: libc.so.6  Cnt: 2
+  0x0010:   Name: GLIBC_2.17  Flags: none  Version: 3
+  0x0020:   Name: GLIBC_2.34  Flags: none  Version: 2

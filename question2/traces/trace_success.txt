@@ -1,0 +1,89 @@
+1533  22:00:38.985147 execve("./backup_tool", ["./backup_tool", "source.txt", "backup"], 0xffffdbcc56b8 /* 5 vars */) = 0
+1533  22:00:38.985441 brk(NULL)         = 0xad8a8c810000
+1533  22:00:38.985538 mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xee8004ce1000
+1533  22:00:38.985635 faccessat(AT_FDCWD</tmp/backup_lab/A_success>, "/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+1533  22:00:38.985824 openat(AT_FDCWD</tmp/backup_lab/A_success>, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3</etc/ld.so.cache>
+1533  22:00:38.985920 fstat(3</etc/ld.so.cache>, {st_mode=S_IFREG|0644, st_size=18123, ...}) = 0
+1533  22:00:38.986103 mmap(NULL, 18123, PROT_READ, MAP_PRIVATE, 3</etc/ld.so.cache>, 0) = 0xee8004cdc000
+1533  22:00:38.986199 close(3</etc/ld.so.cache>) = 0
+1533  22:00:38.986285 openat(AT_FDCWD</tmp/backup_lab/A_success>, "/lib/aarch64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3</usr/lib/aarch64-linux-gnu/libc.so.6>
+1533  22:00:38.986370 read(3</usr/lib/aarch64-linux-gnu/libc.so.6>, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0\267\0\1\0\0\0\360\206\2\0\0\0\0\0@\0\0\0\0\0\0\0\350:\32\0\0\0\0\0\0\0\0\0@\08\0\n\0@\0=\0<\0\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0000\2\0\0"..., 832) = 832
+1533  22:00:38.986460 fstat(3</usr/lib/aarch64-linux-gnu/libc.so.6>, {st_mode=S_IFREG|0755, st_size=1722920, ...}) = 0
+1533  22:00:38.986547 mmap(NULL, 1892240, PROT_NONE, MAP_PRIVATE|MAP_ANONYMOUS|MAP_DENYWRITE, -1, 0) = 0xee8004ada000
+1533  22:00:38.986624 mmap(0xee8004ae0000, 1826704, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libc.so.6>, 0) = 0xee8004ae0000
+1533  22:00:38.986707 munmap(0xee8004ada000, 24576) = 0
+1533  22:00:38.986789 munmap(0xee8004c9e000, 40848) = 0
+1533  22:00:38.986876 mprotect(0xee8004c7a000, 77824, PROT_NONE) = 0
+1533  22:00:38.986965 mmap(0xee8004c8d000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3</usr/lib/aarch64-linux-gnu/libc.so.6>, 0x19d000) = 0xee8004c8d000
+1533  22:00:38.987062 mmap(0xee8004c92000, 49040, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xee8004c92000
+1533  22:00:38.987146 close(3</usr/lib/aarch64-linux-gnu/libc.so.6>) = 0
+1533  22:00:38.987231 set_tid_address(0xee8004ce1fd0) = 1533
+1533  22:00:38.987310 set_robust_list(0xee8004ce1fe0, 24) = 0
+1533  22:00:38.987385 rseq(0xee8004ce2620, 0x20, 0, 0xd428bc00) = 0
+1533  22:00:38.987470 mprotect(0xee8004c8d000, 12288, PROT_READ) = 0
+1533  22:00:38.987547 mprotect(0xad8a89a1f000, 4096, PROT_READ) = 0
+1533  22:00:38.987626 mprotect(0xee8004ce6000, 8192, PROT_READ) = 0
+1533  22:00:38.987713 prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+1533  22:00:38.987885 munmap(0xee8004cdc000, 18123) = 0
+1533  22:00:38.987973 openat(AT_FDCWD</tmp/backup_lab/A_success>, "backup_tool.log", O_WRONLY|O_CREAT|O_APPEND, 0644) = 3</tmp/backup_lab/A_success/backup_tool.log>
+1533  22:00:38.988101 fstat(1<pipe:[337435]>, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+1533  22:00:38.988191 getrandom("\xe0\x9a\x2d\x62\x0b\x7d\xd7\x3c", 8, GRND_NONBLOCK) = 8
+1533  22:00:38.988273 brk(NULL)         = 0xad8a8c810000
+1533  22:00:38.988433 brk(0xad8a8c831000) = 0xad8a8c831000
+1533  22:00:38.988518 openat(AT_FDCWD</tmp/backup_lab/A_success>, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 4</usr/share/zoneinfo/Africa/Kigali>
+1533  22:00:38.988608 fstat(4</usr/share/zoneinfo/Africa/Kigali>, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+1533  22:00:38.988692 fstat(4</usr/share/zoneinfo/Africa/Kigali>, {st_mode=S_IFREG|0644, st_size=149, ...}) = 0
+1533  22:00:38.988770 read(4</usr/share/zoneinfo/Africa/Kigali>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\2\0\0\0\10\276\361\16P\1\0\0\0340\0\0\0\0\34 \0\4LMT\0CAT\0TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 149
+1533  22:00:38.988856 lseek(4</usr/share/zoneinfo/Africa/Kigali>, -80, SEEK_CUR) = 69
+1533  22:00:38.988944 read(4</usr/share/zoneinfo/Africa/Kigali>, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\1\0\0\0\2\0\0\0\10\377\377\377\377\276\361\16P\1\0\0\0340\0\0\0\0\34 \0\4LMT\0CAT\0\nCAT-2\n", 4096) = 80
+1533  22:00:38.989065 close(4</usr/share/zoneinfo/Africa/Kigali>) = 0
+1533  22:00:38.989149 getpid()          = 1533
+1533  22:00:38.989229 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1533] INFO backup started: source.txt -> backup/\n", 76) = 76
+1533  22:00:38.989318 mkdirat(AT_FDCWD</tmp/backup_lab/A_success>, "backup", 0755) = 0
+1533  22:00:38.989437 getpid()          = 1533
+1533  22:00:38.989515 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1533] OK   created backup directory backup\n", 70) = 70
+1533  22:00:38.989602 write(1<pipe:[337435]>, "INFO backup started: source.txt -> backup/\nOK   created backup directory backup\n", 80) = 80
+1533  22:00:38.989750 clone(child_stack=NULL, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xee8004ce1fd0) = 1534
+1533  22:00:38.989974 getpid( <unfinished ...>
+1534  22:00:38.990031 set_robust_list(0xee8004ce1fe0, 24 <unfinished ...>
+1533  22:00:38.990085 <... getpid resumed>) = 1533
+1534  22:00:38.990131 <... set_robust_list resumed>) = 0
+1533  22:00:38.990186 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1533] INFO child 1534 started to copy the file\n", 74 <unfinished ...>
+1534  22:00:38.990237 openat(AT_FDCWD</tmp/backup_lab/A_success>, "source.txt", O_RDONLY <unfinished ...>
+1533  22:00:38.990291 <... write resumed>) = 74
+1534  22:00:38.990339 <... openat resumed>) = 4</tmp/backup_lab/A_success/source.txt>
+1533  22:00:38.990386 wait4(1534,  <unfinished ...>
+1534  22:00:38.990431 getpid()          = 1534
+1534  22:00:38.990539 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1534] OK   opened source source.txt\n", 63) = 63
+1534  22:00:38.990643 openat(AT_FDCWD</tmp/backup_lab/A_success>, "backup/source.txt", O_WRONLY|O_CREAT|O_TRUNC, 0644) = 5</tmp/backup_lab/A_success/backup/source.txt>
+1534  22:00:38.990779 getpid()          = 1534
+1534  22:00:38.990873 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1534] OK   created destination backup/source.txt\n", 76) = 76
+1534  22:00:38.990971 read(4</tmp/backup_lab/A_success/source.txt>, "line 00001 of the important data file\nline 00002 of the important data file\nline 00003 of the import"..., 4096) = 4096
+1534  22:00:38.991071 write(5</tmp/backup_lab/A_success/backup/source.txt>, "line 00001 of the important data file\nline 00002 of the important data file\nline 00003 of the import"..., 4096) = 4096
+1534  22:00:38.991167 read(4</tmp/backup_lab/A_success/source.txt>, "ta file\nline 00109 of the important data file\nline 00110 of the important data file\nline 00111 of th"..., 4096) = 4096
+1534  22:00:38.991260 write(5</tmp/backup_lab/A_success/backup/source.txt>, "ta file\nline 00109 of the important data file\nline 00110 of the important data file\nline 00111 of th"..., 4096) = 4096
+1534  22:00:38.991352 read(4</tmp/backup_lab/A_success/source.txt>, "rtant data file\nline 00217 of the important data file\nline 00218 of the important data file\nline 002"..., 4096) = 3208
+1534  22:00:38.991442 write(5</tmp/backup_lab/A_success/backup/source.txt>, "rtant data file\nline 00217 of the important data file\nline 00218 of the important data file\nline 002"..., 3208) = 3208
+1534  22:00:38.991535 read(4</tmp/backup_lab/A_success/source.txt>, "", 4096) = 0
+1534  22:00:38.991628 getpid()          = 1534
+1534  22:00:38.991715 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1534] OK   copied 11400 bytes\n", 57) = 57
+1534  22:00:38.991807 close(4</tmp/backup_lab/A_success/source.txt>) = 0
+1534  22:00:38.991896 close(5</tmp/backup_lab/A_success/backup/source.txt>) = 0
+1534  22:00:38.991984 close(3</tmp/backup_lab/A_success/backup_tool.log>) = 0
+1534  22:00:38.992091 write(1<pipe:[337435]>, "OK   opened source source.txt\nOK   created destination backup/source.txt\nOK   copied 11400 bytes\n", 97) = 97
+1534  22:00:38.992226 exit_group(0)     = ?
+1534  22:00:38.992430 +++ exited with 0 +++
+1533  22:00:38.992481 <... wait4 resumed>[{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 1534
+1533  22:00:38.992546 --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=1534, si_uid=1000, si_status=0, si_utime=0, si_stime=0} ---
+1533  22:00:38.992607 getpid()          = 1533
+1533  22:00:38.992712 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1533] OK   child 1534 finished: copy succeeded\n", 74) = 74
+1533  22:00:38.992820 newfstatat(AT_FDCWD</tmp/backup_lab/A_success>, "source.txt", {st_mode=S_IFREG|0644, st_size=11400, ...}, 0) = 0
+1533  22:00:38.992923 newfstatat(AT_FDCWD</tmp/backup_lab/A_success>, "backup/source.txt", {st_mode=S_IFREG|0644, st_size=11400, ...}, 0) = 0
+1533  22:00:38.993057 getpid()          = 1533
+1533  22:00:38.993161 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1533] OK   verified backup/source.txt (11400 bytes)\n", 79) = 79
+1533  22:00:38.993269 getpid()          = 1533
+1533  22:00:38.993363 write(3</tmp/backup_lab/A_success/backup_tool.log>, "[2026-10-30 22:00:38] [pid 1533] OK   backup finished\n", 54) = 54
+1533  22:00:38.993484 close(3</tmp/backup_lab/A_success/backup_tool.log>) = 0
+1533  22:00:38.993594 write(1<pipe:[337435]>, "INFO child 1534 started to copy the file\nOK   child 1534 finished: copy succeeded\nOK   verified back"..., 149) = 149
+1533  22:00:38.993706 exit_group(0)     = ?
+1533  22:00:38.993839 +++ exited with 0 +++

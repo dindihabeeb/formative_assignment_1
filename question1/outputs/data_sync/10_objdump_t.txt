@@ -1,0 +1,94 @@
+$ objdump -t data_sync
+
+
+data_sync:     file format elf64-littleaarch64
+
+SYMBOL TABLE:
+0000000000000238 l    d  .interp	0000000000000000              .interp
+0000000000000254 l    d  .note.gnu.build-id	0000000000000000              .note.gnu.build-id
+0000000000000278 l    d  .note.ABI-tag	0000000000000000              .note.ABI-tag
+0000000000000298 l    d  .gnu.hash	0000000000000000              .gnu.hash
+00000000000002b8 l    d  .dynsym	0000000000000000              .dynsym
+0000000000000468 l    d  .dynstr	0000000000000000              .dynstr
+0000000000000534 l    d  .gnu.version	0000000000000000              .gnu.version
+0000000000000558 l    d  .gnu.version_r	0000000000000000              .gnu.version_r
+0000000000000588 l    d  .rela.dyn	0000000000000000              .rela.dyn
+0000000000000660 l    d  .rela.plt	0000000000000000              .rela.plt
+0000000000000780 l    d  .init	0000000000000000              .init
+00000000000007a0 l    d  .plt	0000000000000000              .plt
+0000000000000880 l    d  .text	0000000000000000              .text
+0000000000000ce4 l    d  .fini	0000000000000000              .fini
+0000000000000cf8 l    d  .rodata	0000000000000000              .rodata
+0000000000000dec l    d  .eh_frame_hdr	0000000000000000              .eh_frame_hdr
+0000000000000e38 l    d  .eh_frame	0000000000000000              .eh_frame
+000000000001fd50 l    d  .init_array	0000000000000000              .init_array
+000000000001fd58 l    d  .fini_array	0000000000000000              .fini_array
+000000000001fd60 l    d  .dynamic	0000000000000000              .dynamic
+000000000001ff50 l    d  .got	0000000000000000              .got
+0000000000020000 l    d  .data	0000000000000000              .data
+0000000000020010 l    d  .bss	0000000000000000              .bss
+0000000000000000 l    d  .comment	0000000000000000              .comment
+0000000000000000 l    d  .debug_aranges	0000000000000000              .debug_aranges
+0000000000000000 l    d  .debug_info	0000000000000000              .debug_info
+0000000000000000 l    d  .debug_abbrev	0000000000000000              .debug_abbrev
+0000000000000000 l    d  .debug_line	0000000000000000              .debug_line
+0000000000000000 l    d  .debug_str	0000000000000000              .debug_str
+0000000000000000 l    d  .debug_line_str	0000000000000000              .debug_line_str
+0000000000000000 l    df *ABS*	0000000000000000              Scrt1.o
+0000000000000278 l     O .note.ABI-tag	0000000000000020              __abi_tag
+0000000000000000 l    df *ABS*	0000000000000000              crti.o
+00000000000008b4 l     F .text	0000000000000014              call_weak_fn
+0000000000000000 l    df *ABS*	0000000000000000              crtn.o
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+00000000000008d0 l     F .text	0000000000000000              deregister_tm_clones
+0000000000000900 l     F .text	0000000000000000              register_tm_clones
+0000000000000940 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000020010 l     O .bss	0000000000000001              completed.0
+000000000001fd58 l     O .fini_array	0000000000000000              __do_global_dtors_aux_fini_array_entry
+0000000000000990 l     F .text	0000000000000000              frame_dummy
+000000000001fd50 l     O .init_array	0000000000000000              __frame_dummy_init_array_entry
+0000000000000000 l    df *ABS*	0000000000000000              main.c
+0000000000020018 l     O .bss	0000000000010004              src.1
+0000000000030020 l     O .bss	0000000000010004              dst.0
+0000000000000000 l    df *ABS*	0000000000000000              scan.c
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000000f28 l     O .eh_frame	0000000000000000              __FRAME_END__
+0000000000000000 l    df *ABS*	0000000000000000              
+000000000001fd60 l     O *ABS*	0000000000000000              _DYNAMIC
+0000000000000dec l       .eh_frame_hdr	0000000000000000              __GNU_EH_FRAME_HDR
+000000000001ffc8 l     O *ABS*	0000000000000000              _GLOBAL_OFFSET_TABLE_
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@GLIBC_2.34
+0000000000000000       F *UND*	0000000000000000              perror@GLIBC_2.17
+0000000000000000  w      *UND*	0000000000000000              _ITM_deregisterTMCloneTable
+0000000000020000  w      .data	0000000000000000              data_start
+0000000000020010 g       .bss	0000000000000000              __bss_start__
+0000000000000b28 g     F .text	000000000000014c              scan_dir
+0000000000000000  w    F *UND*	0000000000000000              __cxa_finalize@GLIBC_2.17
+0000000000000000       F *UND*	0000000000000000              opendir@GLIBC_2.17
+0000000000000000       O *UND*	0000000000000000              stderr@GLIBC_2.17
+0000000000040028 g       .bss	0000000000000000              _bss_end__
+0000000000020010 g       .data	0000000000000000              _edata
+0000000000000000       F *UND*	0000000000000000              snprintf@GLIBC_2.17
+0000000000000ce4 g     F .fini	0000000000000000              .hidden _fini
+0000000000040028 g       .bss	0000000000000000              __bss_end__
+0000000000000c74 g     F .text	0000000000000070              has_name
+0000000000000000       F *UND*	0000000000000000              readdir@GLIBC_2.17
+0000000000020000 g       .data	0000000000000000              __data_start
+0000000000000000       F *UND*	0000000000000000              closedir@GLIBC_2.17
+0000000000000000  w      *UND*	0000000000000000              __gmon_start__
+0000000000020008 g     O .data	0000000000000000              .hidden __dso_handle
+0000000000000000       F *UND*	0000000000000000              abort@GLIBC_2.17
+0000000000000cf8 g     O .rodata	0000000000000004              _IO_stdin_used
+0000000000000000       F *UND*	0000000000000000              strcmp@GLIBC_2.17
+0000000000040028 g       .bss	0000000000000000              _end
+0000000000000880 g     F .text	0000000000000034              _start
+0000000000040028 g       .bss	0000000000000000              __end__
+0000000000020010 g       .bss	0000000000000000              __bss_start
+0000000000000998 g     F .text	0000000000000190              main
+0000000000020010 g     O .data	0000000000000000              .hidden __TMC_END__
+0000000000000000  w      *UND*	0000000000000000              _ITM_registerTMCloneTable
+0000000000000000       F *UND*	0000000000000000              printf@GLIBC_2.17
+0000000000000780 g     F .init	0000000000000000              .hidden _init
+0000000000000000       F *UND*	0000000000000000              fprintf@GLIBC_2.17
+
+
